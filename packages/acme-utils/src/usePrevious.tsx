@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 function usePrevious<T>(value: T) {
   // The ref object is a generic container whose current property is mutable ...
@@ -8,7 +8,7 @@ function usePrevious<T>(value: T) {
   // Store current value in ref
   React.useEffect(() => {
     ref.current = value;
-  }, [value]); // Only re-run if value changes
+  }, [value]); // Only re-run if value changes true
 
   // Return previous value (happens before update in useEffect above)
   return ref.current;
